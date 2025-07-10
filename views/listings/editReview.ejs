@@ -1,0 +1,53 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<div class="row">
+  <div class="col col-8 offset-2 new_box mt-3 mb-4">
+    <h3 class="head_title">Edit your Listing</h3>
+
+    <form
+      method="POST"
+      action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=PUT"
+      class="needs-validation"
+      novalidate
+      
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label new_label ms-3">Raing</label>
+        <input
+          name="review[rating]"
+          value="<%= review.rating %>"
+          id="title"
+          
+          type="text"
+          class="form-control show_page-shaddow"
+          required
+        />
+        <div class="invalid-feedback">Enter Title</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label new_label ms-3"
+          >Description</label
+        >
+        <textarea
+          name="review[comment]"
+         
+          class="form-control show_page-shaddow"
+          required
+          id="description"
+        >
+<%= review.comment %></textarea
+        >
+        <div class="invalid-feedback">Enter Description</div>
+      </div>
+
+      
+
+      
+     
+
+     
+
+      <button class="btn mb-2 add-btn btn-dark offset-5">Edit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f7;
+}
+
+.container {
+  flex: 1 !important;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  font-size: 2rem;
+  color: #fe424d;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Fotter */
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222 !important;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.card-textt {
+  text-decoration: none !important ;
+}
+
+/* Card */
+
+.listing-card {
+  margin-bottom: 2rem;
+  border-radius: 1rem !important;
+  border: none !important;
+  background-color: #fff !important;
+  color: #1d1d1f !important;
+  box-shadow: 4px 4px 12px #00000014 !important;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-body p {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  margin-left: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 360 !important;
+  font-size: 1.2rem !important;
+}
+
+/* Zoom effect on image */
+
+.img-container {
+  border-radius: 1rem !important;
+}
+
+.img-container {
+  transition: transform 0.8s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.08);
+}
+
+.add-btn {
+  background-color: #fe424d;
+  color: white;
+  border: none !important;
+}
+
+.head_title {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #222222;
+}
+
+/* Show Page */
+
+.show-img {
+  height: 50vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.show-card {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.show_page-shaddow {
+  box-shadow: 4px 4px 12px #00000014;
+}
+
+.new_label {
+  font-size: 1.2rem;
+}
+
+.new_box {
+  border-radius: 1.2rem;
+  box-shadow: 0 0 12px 12px #00000014;
+  /* border: 1px solid black; */
+  background-color: #ffffff43 !important;
+  padding: 0 1.5rem;
+}
+
+/* .show_reviews{
+   margin-bottom: 0rem !important;
+} */
+
+/* Review card */
+.date_show {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+
+
+
+/* flash error */
+
+
+
+#errorMsg {
+  padding: 12px 16px;
+
+  font-weight: bold;
+  opacity: 1;
+  max-height: 100px;
+  /* overflow: hidden; */
+  transition: opacity 1s ease, max-height 1s ease, margin-bottom 1s ease,
+    padding 1.5s ease;
+}
+
+#errorMsg.hide {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+  padding: 0 16px;
+}
+
+.row {
+  transition: margin-top 1s ease-out;
+}

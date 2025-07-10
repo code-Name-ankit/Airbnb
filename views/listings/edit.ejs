@@ -1,0 +1,106 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<div class="row">
+  <div class="col col-8 offset-2 new_box mt-3 mb-4">
+    <h3 class="head_title">Edit your Listing</h3>
+
+    <form
+      method="POST"
+      action="/listings/<%= listing._id %>?_method=PUT"
+      class="needs-validation"
+      novalidate
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label new_label ms-3">Title</label>
+        <input
+          name="listing[title]"
+          value="<%= listing.title %>"
+          id="title"
+          placeholder="enter title "
+          type="text"
+          class="form-control show_page-shaddow"
+          required
+        />
+        <div class="invalid-feedback">Enter Title</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label new_label ms-3"
+          >Description</label
+        >
+        <textarea
+          name="listing[description]"
+          placeholder="enter description"
+          class="form-control show_page-shaddow"
+          required
+          id="description"
+        >
+<%= listing.description %></textarea
+        >
+        <div class="invalid-feedback">Enter Description</div>
+      </div>
+
+      <div clsss="mb-3 " >
+    <label for="orImage" class="form-label new_label ms-3" >Original Listing Image</label ><br>
+        <img src="<%=originaImagelUrl %>" style="height: 6rem; width: 15rem;" id="orImage"/>
+      </div>
+
+      <div class="mb-3 mt-2">
+      
+        <input
+          name="listing[image]"
+          type="file"
+          class="form-control show_page-shaddow"
+          id="image"
+        />
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label for="price" class="form-label new_label ms-3">Price</label>
+          <input
+            name="listing[price]"
+            placeholder="enter price"
+            value="<%= listing.price %>"
+            type="number"
+            class="form-control show_page-shaddow"
+            id="price"
+            required
+          />
+          <div class="invalid-feedback">Enter Price</div>
+        </div>
+
+        <br />
+        <div class="col-md-8 mb-3">
+          <label for="country" class="form-label new_label ms-3">Country</label>
+          <input
+            name="listing[country]"
+            placeholder="enter country"
+            value="<%= listing.country %>"
+            type="text"
+            class="form-control show_page-shaddow"
+            id="country"
+            required
+          />
+          <div class="invalid-feedback">Enter Country</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label new_label ms-3">Location</label>
+        <input
+          name="listing[location]"
+          placeholder="enter location"
+          value="<%= listing.location %>"
+          type="text"
+          class="form-control show_page-shaddow"
+          id="location"
+          required
+        />
+        <div class="invalid-feedback">Enter Location</div>
+      </div>
+
+      <button class="btn mb-2 add-btn btn-dark offset-5">Edit</button>
+    </form>
+  </div>
+</div>
