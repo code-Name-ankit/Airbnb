@@ -38,11 +38,20 @@ font-size: 1rem;
         <a class="nav-link" href="/listings">Explore</a>
       </div>
       <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
-      <input class="form-control me-2 search-input" type="search" placeholder="Search" />
+
+<!-- <form action="/search" method="get">
+      <input type="text" name="q" placeholder="Enter city or keyword">
+      <button type="submit">Search</button>
+    </form> -->
+
+
+        <form class="d-flex" role="search" action="/search" method="get">
+      <input class="form-control me-2 search-input" type="search" placeholder="Search" name="q" />
       <button class="btn search-btn" type="submit">
         <i class="fa-solid fa-magnifying-glass"></i>Search
       </button>
+
+
     </form>
       </div>
       <div class="navbar-nav ms-auto">

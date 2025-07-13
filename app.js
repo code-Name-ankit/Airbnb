@@ -16,11 +16,14 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
+// const Listing = require("./models/listing.js");
 const listingRouter = require("./routes/listingRouter.js");
 const reviewRouter = require("./routes/reviewRouter.js");
 const userRouter = require("./routes/userRourer.js");
+const searchRouter =  require("./routes/searchRoute.js");
 
-const dbUrl = process.env.ATLASDB_URL;
+const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+// const dbUrl = process.env.ATLASDB_URL;
 
 main()
   .then(() => {
@@ -31,7 +34,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(dbUrl);
+  await mongoose.connect(MONGO_URL);
 }
 
 const multer = require("multer");
@@ -45,7 +48,7 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 
 const store = MongoStore.create({
-  mongoUrl: dbUrl,
+  mongoUrl: MONGO_URL,
   crypto: {
     secret: process.env.SECRET,
     touchAfter: 24 * 3600,
@@ -85,6 +88,8 @@ app.use((req, res, next) => {
   next();
 });
 
+
+ app.use("/search", searchRouter)
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
