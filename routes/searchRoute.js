@@ -11,4 +11,4 @@ const searchControllers = require("../controllers/search.js");
 router.get("/", wrapAsync(searchControllers.searchListings));
 
 
-module.exports = router;
+module.exports= router;

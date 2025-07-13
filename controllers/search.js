@@ -12,5 +12,13 @@ module.exports.searchListings = async (req, res) => {
     ],
   });
 
-  res.render("listings/results", { allListings });
+
+if (!allListings || allListings.length === 0 ) {
+    req.flash("error", " This Listing is not found");
+    res.redirect("/listings");
+  } else {
+    res.render("listings/results", { allListings });
+  }
+
+  
 };
