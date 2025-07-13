@@ -45,8 +45,8 @@ font-size: 1rem;
     </form> -->
 
 
-        <form class="d-flex" role="search" action="/search" method="get">
-      <input class="form-control me-2 search-input" type="search" placeholder="Search" name="q" />
+        <form class="d-flex" role="search" action="/search" method="get" >
+      <input class="form-control me-2 search-input" type="search" placeholder="Search" name="q" id="searchInput" />
       <button class="btn search-btn" type="submit">
         <i class="fa-solid fa-magnifying-glass"></i>Search
       </button>
@@ -66,3 +66,10 @@ font-size: 1rem;
     </div>
   </div>
 </nav>
+
+
+<!-- <script>
+  function clearSearchInput() {
+    document.getElementById("searchInput").value = "";
+  }
+</script> -->
