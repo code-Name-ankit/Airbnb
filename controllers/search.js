@@ -12,5 +12,5 @@ module.exports.searchListings = async (req, res) => {
     ],
   });
 
-  res.render("results", { allListings });
+  res.render("listings/results", { allListings });
 };
