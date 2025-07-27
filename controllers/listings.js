@@ -54,7 +54,7 @@ module.exports.renderEditForm = async (req, res) => {
 
     originaImagelUrl = originaImagelUrl.replace(
       "/upload",
-      "/upload/w_250,e_blur:200/"
+      "/upload/w_250,e_blur:100/"
     );
     res.render("listings/edit.ejs", { listing, originaImagelUrl });
   }
