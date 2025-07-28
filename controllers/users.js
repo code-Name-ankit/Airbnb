@@ -44,7 +44,7 @@ module.exports.login = async (req, res) => {
   res.redirect(redirectUrl);
 };
 
-module.exports.looaut = (req, res) => {
+module.exports.logout = (req, res) => {
   req.logout((err) => {
     if (err) {
       return next(err);
